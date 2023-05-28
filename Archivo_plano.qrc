@@ -1,0 +1,9 @@
+<RCC>
+	<qresource_prefix="/Tratamiento_Imagenes" >
+		<file>./imagenes_redes/img01.jpg</file>
+		<file>./imagenes_redes/img02.jpg</file>
+		<file>./imagenes_redes/img03.jpg</file>
+		<file>./imagenes_redes/img04.jpg</file>
+		<file>./imagenes_redes/img05.jpg</file>
+	</qresource>
+</RCC>
