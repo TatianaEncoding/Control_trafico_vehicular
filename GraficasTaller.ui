@@ -7,14 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>429</width>
-    <height>543</height>
+    <height>603</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>RaspberryPi</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="LOGO">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -27,7 +27,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>imagenes_redes/img00.png</pixmap>
+     <pixmap resource="Archivo_plano.qrc">:/Tratamiento_Imagenes/imagenes_redes/img00.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -113,7 +113,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>300</y>
+      <y>360</y>
       <width>381</width>
       <height>151</height>
      </rect>
@@ -123,7 +123,7 @@
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>460</y>
+      <y>520</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -144,8 +144,8 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>270</y>
+      <x>90</x>
+      <y>330</y>
       <width>261</width>
       <height>16</height>
      </rect>
@@ -180,6 +180,42 @@
      <string>GRAFICA 5</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="LED">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>270</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(251, 255, 166);</string>
+    </property>
+    <property name="text">
+     <string>LED</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="SALIDA_LED">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>270</y>
+      <width>261</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -190,10 +226,52 @@
      <height>26</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="actionAbrir"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <widget class="QMenu" name="menuOpiciones">
+    <property name="title">
+     <string>Opiciones</string>
+    </property>
+    <addaction name="actionGrafica_1"/>
+    <addaction name="actionGrafica2"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuOpiciones"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAbrir">
+   <property name="text">
+    <string>Abrir</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionGrafica_1">
+   <property name="icon">
+    <iconset resource="Archivo_plano.qrc">
+     <normaloff>:/imagenes_redes/2.png</normaloff>:/imagenes_redes/2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Grafica 1</string>
+   </property>
+  </action>
+  <action name="actionGrafica2">
+   <property name="text">
+    <string>Grafica2</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="Archivo_plano.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>SALIR</sender>

@@ -14,6 +14,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math
 import random
+import Archivo_plano
 n=200
 matplotlib.use("Qt5Agg")
 
@@ -47,6 +48,7 @@ class GraficasTallerDes(QtWidgets.QMainWindow):
         self.Grafica_3.clicked.connect(self.c)
         self.Grafica_4.clicked.connect(self.d)
         self.Grafica_5.clicked.connect(self.e)
+        self.LED.clicked.connect(self.f)
         self.load_data()
     
     def load_data(self):
@@ -102,7 +104,36 @@ class GraficasTallerDes(QtWidgets.QMainWindow):
             plt.title(f"Nivel de ruido del vehiculo")
             plt.ylabel("Decibelios(dB)")
             plt.xlabel("Tiempo (s)")
-            plt.show()          
+            plt.show()   
+    def f(self):
+            self.SALIDA_LED.setText(str("OPRIMA EL BOTON PARA PRENDER EL LED"))
+            # Pin assignments
+            print('Entra a funcion')
+            import  RPi.GPIO as GPIO
+            LED_PIN = 7
+            BUTTON_PIN = 17
+            # Setup GPIO module and pins
+            GPIO.setmode(GPIO.BCM)
+            GPIO.setup(LED_PIN, GPIO.OUT)
+            GPIO.setup(BUTTON_PIN, GPIO.IN)
+            # Set LED pin to OFF (no voltage)
+            GPIO.output(LED_PIN, GPIO.LOW)
+            print('Ejecutando..')
+            try:
+                # Loop forever
+                while 1:
+                    # Detect voltage on button pin
+                    if GPIO.input(BUTTON_PIN) == 1:
+                        GPIO.output(LED_PIN, GPIO.HIGH)
+                        self.SALIDA_LED.setText(str("LED ENCENDIDO"))
+                    else:
+                        GPIO.output(LED_PIN,GPIO.LOW)
+                        self.SALIDA_LED.setText(str("LED APAGADO"))
+            except KeyboardInterrupt:
+                print('Hecho')
+            finally:
+                GPIO.cleanup()
+            #self.SALIDA_LED.setPixmap(QtGui.QPixmap('./imagenes_redes/5.jpg'))   
             
 
 def main():
