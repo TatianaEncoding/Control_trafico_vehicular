@@ -237,7 +237,7 @@ class GraficasTallerDes(QtWidgets.QMainWindow):
             self.SALIDA_API.setText(str("CARGA Y GRAFICA EN THINGSPEAK")) 
             # -*- coding: utf-8 -*-
             
-            from __future__ import print_function
+            #from __future__ import print_function
             #import print_function
             # Python imports
             import http.client
