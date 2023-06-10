@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>429</width>
-    <height>603</height>
+    <height>703</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -113,7 +113,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>360</y>
+      <y>440</y>
       <width>381</width>
       <height>151</height>
      </rect>
@@ -123,7 +123,7 @@
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>520</y>
+      <y>610</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -145,7 +145,7 @@
     <property name="geometry">
      <rect>
       <x>90</x>
-      <y>330</y>
+      <y>410</y>
       <width>261</width>
       <height>16</height>
      </rect>
@@ -208,6 +208,76 @@
      <rect>
       <x>130</x>
       <y>270</y>
+      <width>261</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SENSOR">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>310</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(185, 237, 255);</string>
+    </property>
+    <property name="text">
+     <string>SENSOR</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="SALIDA_SENSOR">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>310</y>
+      <width>261</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="API">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>350</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(185, 237, 255);</string>
+    </property>
+    <property name="text">
+     <string>GRAFICA API</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="SALIDA_API">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>350</y>
       <width>261</width>
       <height>31</height>
      </rect>
