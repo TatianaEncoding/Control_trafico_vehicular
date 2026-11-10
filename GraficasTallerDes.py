@@ -2,7 +2,7 @@
 """
 Created on Sat May 27 09:37:42 2023
 
-@author: Dastyb
+@author: TatiP
 """
 
 import os
